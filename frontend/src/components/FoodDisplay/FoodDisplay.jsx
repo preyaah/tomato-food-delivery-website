@@ -12,10 +12,10 @@ const FoodDisplay = ({ category }) => {
       <div className="food-display-item">
         {food_list &&
           food_list
-            .filter((item) => category === 'All' || item.category === category)
-            .map((item, index) => (
+            .filter(item => category === 'All' || item.category === category)
+            .map(item => (
               <FoodItem
-                key={item._id || index}
+                key={item._id}
                 id={item._id}
                 name={item.name}
                 description={item.description}
@@ -28,4 +28,4 @@ const FoodDisplay = ({ category }) => {
   );
 };
 
-export default FoodDisplay
+export default FoodDisplay;

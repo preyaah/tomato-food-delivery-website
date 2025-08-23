@@ -10,7 +10,7 @@ const Navbar = ({setShowLogin}) => {
   const[menu,setMenu] = useState("home");
   return (
     <div className='navbar'>
-      <img src={assets.logo} alt="" className="logo" />
+      <Link to='/'><img src={assets.logo} alt="" className="logo" /></Link>
       <ul className="navbar-menu">
         {/* for moving the underline line */}
         <Link to='/' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>home</Link>
@@ -21,7 +21,7 @@ const Navbar = ({setShowLogin}) => {
         <div className="navbar-right">
           <img src={assets.search_icon} alt=""/>
             <div className="navbar-search-icon">
-              <img src={assets.basket_icon} alt=""/>
+              <Link to='/cart'><img src={assets.basket_icon} alt=""/></Link>
                 <div className="dot">
 
                 </div>
